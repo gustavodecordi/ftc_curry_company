@@ -8,8 +8,6 @@ st.set_page_config(
         page_icon = '💎',
         layout = 'wide'
 )
-
-# image_path = 'C:\\Users\\gusta\\Desktop\\comunidade_ds\\cursos\\ftc\\ciclo7\\quarta_7_dezembro\\'
 image = Image.open( 'logo.png' )
 st.sidebar.image( image, width = 120 )
 
