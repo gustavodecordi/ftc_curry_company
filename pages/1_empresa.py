@@ -23,7 +23,6 @@ st.set_page_config(
 def order_metric( dfm ):
     dfm_sel_1 = dfm.loc[:,['ID','Order_Date']].groupby(['Order_Date']).count().reset_index()
     fig = px.bar(dfm_sel_1, x='Order_Date', y='ID')
-
     return fig
 
 def traffic_order_share( dfm ):
@@ -85,7 +84,6 @@ def india_map( dfm ):
         folium.Marker([dfm_sel_6.loc[i,'Delivery_location_latitude'], dfm_sel_6.loc[i,'Delivery_location_longitude']],
                        popup = dfm_sel_6.loc[i,['City','Road_traffic_density']]).add_to(map)
     folium_static( map, width=1024, height=600 )
-    
     return None
 
 # Limpeza dos dados
